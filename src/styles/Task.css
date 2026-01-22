@@ -1,0 +1,128 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border: 2px solid #e0e7ff;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.task-item.done {
+  background: #f0f5ff;
+  border-color: #c7d2fe;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.task-description {
+  font-size: 1rem;
+  color: #1f2937;
+  word-break: break-word;
+  transition: all 0.3s ease;
+}
+
+.task-description.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.task-edit-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button,
+.delete-button,
+.save-button,
+.cancel-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.edit-button {
+  background: #dbeafe;
+  color: #0369a1;
+}
+
+.edit-button:hover {
+  background: #bfdbfe;
+}
+
+.delete-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+.save-button {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.save-button:hover {
+  background: #bbf7d0;
+}
+
+.cancel-button {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.cancel-button:hover {
+  background: #e5e7eb;
+}
